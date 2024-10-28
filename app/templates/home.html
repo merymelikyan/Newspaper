@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block home_template %} 
+  <div id="templatemo_wrapper">
+    <div id="templatemo_slider">
+        <div id="flash_grid_slider">
+            <a rel="nofollow" href="http://www.adobe.com/go/getflashplayer">
+                <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+            </a>
+        </div>
+    </div>
+    
+    <div id="content_top">
+        <div id="page_title"> {{header_text.title}}</div>
+        <div id="search_box">
+            <form action="#" method="get">
+                <input type="text" value="Search" name="q" size="10" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+                <input type="submit" name="Search" value="" id="searchbutton" title="Search" />
+            </form>
+        </div>
+        <div class="cleaner"></div>
+    </div>  
+    
+    <div id="no_sidebar">
+        
+        <div class="col_3">
+            <h2>{{free_template.title}}</h2>
+            <p><em>{{free_template.description1}}</em></p>
+            <p>{{free_template.description2}} <a rel="nofollow" href="{{free_template.link_url}}">{{free_template.link_name}}</a> {{free_template.description3}}</p>
+            <a href="#" class="more">More</a>
+        </div>
+        <div class="col_3">
+            <h2>{{web_desine.title}}</h2>
+            <p>{{web_desine.description}} <a href="{{web_desine.link_url1}}" rel="nofollow"><strong>{{web_desine.link_name1}}</strong></a> &amp; <a href="{{web_desine.link_url2}}" rel="nofollow"><strong>{{web_desine.link_name2}}</strong></a>.</p>
+            <ul class="templatemo_list">
+                <li>{{web_desine.list1}}</li>
+                <li>{{web_desine.list2}}</li>
+                <li>{{web_desine.list3}}</li>
+                <li>{{web_desine.list4}}</li>
+                <li>{{web_desine.list5}} </li>
+            </ul>
+            <a href="#" class="more">More</a>	
+        </div>
+        <div class="col_3 rmc">
+            <h2>{{portfolio.title}}</h2>
+            <img src="{{portfolio.image.url}}" alt="{{portfolio.image.title}}" class="{{portfolio.image.class}}" />
+            <p><em>{{portfolio.description}}</em></p>
+            <a href="#" class="more">More</a>	
+        </div>
+        
+        <div class="cleaner h60"></div>
+        {% for story in stories %}
+            <div class="col_4 rmc">
+                <h3>{{story.title}}</h3>
+                <img src="{{story.image.url}}" alt="{{story.image_title}}" />
+                {{story.description}}
+            </div>
+        {% endfor %}
+        {% comment %} <div class="col_4">
+            <h3>Story Two</h3>
+            <img src="{% static "images/templatemo_image_02.jpg" %}" alt="Image  02" />
+            Suspendisse rhoncus tincidunt mauris, eget fringilla magna at arcu. 
+        </div>
+        <div class="col_4">
+            <h3>Story Three</h3>
+            <img src="{% static "images/templatemo_image_03.jpg" %}" alt="Image 03" />
+            Maecenas ut eros mi, in suscipit ante ut suscipit tortor interdum id.
+        </div>
+        <div class="col_4 rmc">
+            <h3>Story Four</h3>
+            <img src="{% static "images/templatemo_image_04.jpg" %}" alt="Image 04" />
+            Donec faucibus accumsan lectus id posuere. Morbi dictum purus. 
+        </div> {% endcomment %}
+
+    </div>      
+    <div id="templatemo_content">
+        <div class="cleaner"></div>
+    </div> <!-- end of content -->
+    <div id="templatemo_sidebar">
+
+    </div> <!-- end of sidebar -->
+    <div class="cleaner"></div>
+    
+   
+  
+  </div>
+
+
+{% endblock %} 
