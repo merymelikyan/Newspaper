@@ -1,54 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Newspaper Template - About</title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <!-- templatemo 344 newspaper -->
-    <!-- 
-    Newspaper Template 
-    http://www.templatemo.com/preview/templatemo_344_newspaper 
-    -->
-    <link href="{% static "templatemo_style.css" %}" rel="stylesheet" type="text/css" />
-
-    <script language="javascript" type="text/javascript">
-    function clearText(field)
-    {
-        if (field.defaultValue == field.value) field.value = '';
-        else if (field.value == '') field.value = field.defaultValue;
-    }
-    </script>
-
-    <link rel="stylesheet" type="text/css" href="{% static "ddsmoothmenu.css" %}" />
-
-    <script type="text/javascript" src="{% static "js/jquery.min.js" %}"></script>
-    <script type="text/javascript" src="{% static "js/ddsmoothmenu.js" %}">
-
-    /***********************************************
-    * Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
-    * This notice MUST stay intact for legal use
-    * Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
-    ***********************************************/
-
-    </script>
-
-    <script type="text/javascript">
-
-    ddsmoothmenu.init({
-        mainmenuid: "templatemo_menu", //menu DIV id
-        orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
-        classname: 'ddsmoothmenu', //class added to menu's outer DIV
-        //customtheme: ["#1c5a80", "#18374a"],
-        contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
-    })
-
-    </script>
-
-    </head>
+    
 
     <body>
       {% block about_template %}   
@@ -67,7 +20,8 @@
             <div id="templatemo_content">
                 <h2>{{about_text1.title}}</h2>
                 <p>{{about_text1.description1}}
-                  <a href="{{about_text1.link_url1}}">{{about_text1.link_name1}}</a> {{about_text1.description1}} <a href="{{about_text1.link_url2}}">{{about_text1.link_name2}}</a> {{about_text1.description3}}</p>
+                  <a href="{{about_text1.link_url1}}">{{about_text1.link_name1}}</a> {{about_text1.description2}} 
+                  <a href="{{about_text1.link_url2}}">{{about_text1.link_name2}}</a> {{about_text1.description3}}</p>
                 <ul class="templatemo_list">
                   {% for list in about_text1_list %}
                     <li>{{list.list_name}}</li>
@@ -112,4 +66,4 @@
         </div>
       {% endblock %}  
     </body>
-    </html>
+ 

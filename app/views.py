@@ -19,7 +19,19 @@ from .models import (
     AboutText2,
     CategoriesMain,
     Categories,
-    Testimonial
+    Testimonial,
+    BlogMain,
+    Blog1,
+    Blogs,
+    Paging,
+    PortfolioMain,
+    WebImage,
+    Photography,
+    PrintMedia,
+    BlogPostMain,
+    BlogPost,
+    CommentsMain,
+    Comments
     )
 
 
@@ -70,7 +82,6 @@ def contact(request):
         "categories_main": CategoriesMain.objects.all().first(),
         "categories": Categories.objects.all(),
         "testimonial": Testimonial.objects.all().first(),
-        "categories": Categories.objects.all(),
         "resent_blog_main": ResentBlogMain.objects.all(),
         "resent_posts": ResentPosts.objects.all(),
         "resent_comments": ResentComments.objects.all(),
@@ -85,6 +96,10 @@ def blog(request):
     context = {
         "header_text": HeaderText.objects.all().first(),
         "footer_text": FooterText.objects.all().first(),
+        "blog_main": BlogMain.objects.all().first(),
+        "blog1": Blog1.objects.all().first(),
+        "blogs": Blogs.objects.all(),
+        "paging": Paging.objects.all(),
         "categories_main": CategoriesMain.objects.all().first(),
         "categories": Categories.objects.all(),
         "testimonial": Testimonial.objects.all().first(),
@@ -93,7 +108,8 @@ def blog(request):
         "resent_posts": ResentPosts.objects.all(),
         "resent_comments": ResentComments.objects.all(),
         "blogroll": Blogroll.objects.all(),
-        "contact_socials": ContactSocials.objects.all()
+        "contact_socials": ContactSocials.objects.all(),
+        "paging": Paging.objects.all()
     }
     
     return render(request, "blog.html", context)
@@ -103,7 +119,21 @@ def blog(request):
 def blog_post(request):
     context = {
         "header_text": HeaderText.objects.all().first(),
-        "footer_text": FooterText.objects.all().first()
+        "footer_text": FooterText.objects.all().first(),
+        "blog_post_main": BlogPostMain.objects.all().first(),
+        "blog_post": BlogPost.objects.all().first(),
+        "comments_main": CommentsMain.objects.all().first(),
+        "comments": Comments.objects.all(),
+        "categories_main": CategoriesMain.objects.all().first(),
+        "categories": Categories.objects.all(),
+        "testimonial": Testimonial.objects.all().first(),
+        "categories": Categories.objects.all(),
+        "resent_blog_main": ResentBlogMain.objects.all(),
+        "resent_posts": ResentPosts.objects.all(),
+        "resent_comments": ResentComments.objects.all(),
+        "blogroll": Blogroll.objects.all(),
+        "contact_socials": ContactSocials.objects.all(),
+        "paging": Paging.objects.all()
     }
     
     return render(request, "blog_post.html", context)
@@ -122,6 +152,10 @@ def portfolio(request):
     context = {
         "header_text": HeaderText.objects.all().first(),
         "footer_text": FooterText.objects.all().first(),
+        "portfolio_main": PortfolioMain.objects.all().first(),
+        "web_image": WebImage.objects.all(),
+        "photography": Photography.objects.all(),
+        "print_media": PrintMedia.objects.all(),
         "resent_blog_main": ResentBlogMain.objects.all(),
         "resent_posts": ResentPosts.objects.all(),
         "resent_comments": ResentComments.objects.all(),

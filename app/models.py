@@ -73,7 +73,7 @@ class Portfolio(models.Model):
     description = models.CharField(max_length=255, blank=True, null=True)
     image_title = models.CharField(max_length=255, blank=True, null=True)
     image_class = models.CharField(max_length=255, blank=True, null=True)
-    image = models.ImageField(upload_to="portfolio.url", blank=True, null=True)
+    image = models.ImageField(upload_to="portfolio", blank=True, null=True)
    
  
     def __str__(self):
@@ -89,7 +89,7 @@ class Stories(models.Model):
     title = models.CharField(max_length=255)
     description = models.CharField(max_length=255, blank=True, null=True)
     image_title = models.CharField(max_length=255, blank=True, null=True)
-    image = models.ImageField(upload_to="stories.url", blank=True, null=True)
+    image = models.ImageField(upload_to="stories", blank=True, null=True)
    
  
     def __str__(self):
@@ -272,3 +272,209 @@ class Testimonial(models.Model):
     class Meta:
         verbose_name = "Testimonial"
         verbose_name_plural = "Testimonial"
+
+
+
+class BlogMain(models.Model):
+    title = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Blog Main"
+        verbose_name_plural = "Blog Main"   
+
+
+
+
+class Blog1(models.Model):
+    title = models.CharField(max_length=255)
+    description1 = models.CharField(max_length=500, blank=True, null=True)
+    description2 = models.CharField(max_length=500, blank=True, null=True)
+    description3 = models.CharField(max_length=500, blank=True, null=True)
+    text = models.CharField(max_length=500, blank=True, null=True)
+    link_url1 = models.URLField(max_length=255)
+    link_name1 = models.CharField(max_length=255)
+    link_url2 = models.URLField(max_length=255)
+    link_name2 = models.CharField(max_length=255)
+    post = models.CharField(max_length=255, blank=True, null=True)
+    date = models.CharField(max_length=255, blank=True, null=True)
+    link_url3 = models.CharField(max_length=255, blank=True, null=True)
+    link_name3 = models.CharField(max_length=255, blank=True, null=True)
+    link_url4 = models.CharField(max_length=255, blank=True, null=True)
+    link_name4 = models.CharField(max_length=255, blank=True, null=True)
+    image_title = models.CharField(max_length=255, blank=True, null=True)
+    image = models.ImageField(upload_to="blog1", blank=True, null=True)
+    link_url5 = models.CharField(max_length=255, blank=True, null=True)
+    link_name5 = models.CharField(max_length=255, blank=True, null=True)
+    
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Blog1"
+        verbose_name_plural = "Blog1"  
+
+
+
+class Blogs(models.Model):
+    title = models.CharField(max_length=255)
+    description1 = models.CharField(max_length=500, blank=True, null=True)
+    description2 = models.CharField(max_length=500, blank=True, null=True)
+    image_title = models.CharField(max_length=255, blank=True, null=True)
+    image = models.ImageField(upload_to="blogs", blank=True, null=True)
+    post = models.CharField(max_length=255, blank=True, null=True)
+    date = models.CharField(max_length=255, blank=True, null=True)
+    link_url1 = models.CharField(max_length=255, blank=True, null=True)
+    link_name1 = models.CharField(max_length=255, blank=True, null=True)
+    link_url2 = models.CharField(max_length=255, blank=True, null=True)
+    link_name2 = models.CharField(max_length=255, blank=True, null=True)
+    link_url3 = models.CharField(max_length=255, blank=True, null=True)
+    link_name3 = models.CharField(max_length=255, blank=True, null=True)
+
+    
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Blogs"
+        verbose_name_plural = "Blogs"  
+
+
+class Paging(models.Model):
+    link_url = models.CharField(max_length=255)
+    link_name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return f"{self.link_name}"
+
+    class Meta:
+        verbose_name = "Paging"
+        verbose_name_plural = "Paging"   
+
+
+class PortfolioMain(models.Model):
+    title = models.CharField(max_length=255)
+  
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Portfolio Main"
+        verbose_name_plural = "Portfolio Main"        
+
+
+
+class WebImage(models.Model):
+    link_url = models.CharField(max_length=255, blank=True, null=True)
+    link_name = models.CharField(max_length=255, blank=True, null=True)
+    image_title = models.CharField(max_length=255, blank=True, null=True)
+    image = models.ImageField(upload_to="web_image", blank=True, null=True)
+   
+    def __str__(self):
+        return f"{self.link_name}"
+    
+    class Meta:
+        verbose_name = "Web Image"
+        verbose_name_plural = "Web Image"
+
+
+class Photography(models.Model):
+    link_url = models.CharField(max_length=255, blank=True, null=True)
+    link_name = models.CharField(max_length=255, blank=True, null=True)
+    image_title = models.CharField(max_length=255, blank=True, null=True)
+    image = models.ImageField(upload_to="photography", blank=True, null=True)
+   
+    def __str__(self):
+        return f"{self.link_name}"
+    
+    class Meta:
+        verbose_name = "Photography"
+        verbose_name_plural = "Photography"
+
+class PrintMedia(models.Model):
+    link_url = models.CharField(max_length=255, blank=True, null=True)
+    link_name = models.CharField(max_length=255, blank=True, null=True)
+    image_title = models.CharField(max_length=255, blank=True, null=True)
+    image = models.ImageField(upload_to="print_media", blank=True, null=True)
+   
+    def __str__(self):
+        return f"{self.link_name}"
+    
+    class Meta:
+        verbose_name = "Print Media"
+        verbose_name_plural = "Print Media"
+
+
+class BlogPostMain(models.Model):
+    title = models.CharField(max_length=255)
+  
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Blog Post Main"
+        verbose_name_plural = "Blog Post Main" 
+
+
+class BlogPost(models.Model):
+    title = models.CharField(max_length=255)
+    image_title = models.CharField(max_length=255, blank=True, null=True)
+    image = models.ImageField(upload_to="blog_post", blank=True, null=True)
+    description1 = models.CharField(max_length=1000, blank=True, null=True)
+    description2 = models.CharField(max_length=1000, blank=True, null=True)
+    description3 = models.CharField(max_length=1000, blank=True, null=True)
+    description4 = models.CharField(max_length=1000, blank=True, null=True)
+    description5 = models.CharField(max_length=1000, blank=True, null=True)
+    description6 = models.CharField(max_length=1000, blank=True, null=True)
+    description7 = models.CharField(max_length=1000, blank=True, null=True)
+    link_url1 = models.CharField(max_length=255, blank=True, null=True)
+    link_name1 = models.CharField(max_length=255, blank=True, null=True)
+    text = models.CharField(max_length=255, blank=True, null=True)
+    link_url2 = models.CharField(max_length=255, blank=True, null=True)
+    link_name2 = models.CharField(max_length=255, blank=True, null=True)
+    link_url3 = models.CharField(max_length=255, blank=True, null=True)
+    link_name3 = models.CharField(max_length=255, blank=True, null=True)
+    link_url4 = models.CharField(max_length=255, blank=True, null=True)
+    link_name4 = models.CharField(max_length=255, blank=True, null=True)
+    link_url5 = models.CharField(max_length=255, blank=True, null=True)
+    link_name5 = models.CharField(max_length=255, blank=True, null=True)
+
+   
+    def __str__(self):
+        return self.title
+    
+    class Meta:
+        verbose_name = "Blog Post"
+        verbose_name_plural = "Blog Post"
+
+
+class CommentsMain(models.Model):
+    title = models.CharField(max_length=255)
+  
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Comments Main"
+        verbose_name_plural = "Comments Main"   
+
+
+class Comments(models.Model):
+    name = models.CharField(max_length=255)
+    description = models.CharField(max_length=500)
+    date = models.CharField(max_length=500)
+    time = models.CharField(max_length=255)
+    image_title = models.CharField(max_length=255)
+    image = models.ImageField(upload_to="comments")
+   
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = "Comments"
+        verbose_name_plural = "Comments"
+
+

@@ -3,60 +3,60 @@
    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Newspaper Website Template</title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <!-- templatemo 344 newspaper -->
-    <!-- 
-    Newspaper Template 
-    http://www.templatemo.com/preview/templatemo_344_newspaper 
-    -->
-    <link href="{% static "templatemo_style.css" %}" rel="stylesheet" type="text/css" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>Newspaper Website Template</title>
+      <meta name="keywords" content="" />
+      <meta name="description" content="" />
+      <!-- templatemo 344 newspaper -->
+      <!-- 
+      Newspaper Template 
+      http://www.templatemo.com/preview/templatemo_344_newspaper 
+      -->
+      <link href="{% static "templatemo_style.css" %}" rel="stylesheet" type="text/css" />
 
-    <script language="javascript" type="text/javascript">
-    function clearText(field)
-    {
-        if (field.defaultValue == field.value) field.value = '';
-        else if (field.value == '') field.value = field.defaultValue;
-    }
-    </script>
+      <script language="javascript" type="text/javascript">
+      function clearText(field)
+      {
+          if (field.defaultValue == field.value) field.value = '';
+          else if (field.value == '') field.value = field.defaultValue;
+      }
+      </script>
 
-    <script type="text/javascript" src="{% static "js/swfobject.js" %}"></script>
-    <script type="text/javascript">
-        var flashvars = {};
-        flashvars.xml_file = "photo_list.xml";
-        var params = {};
-        params.wmode = "transparent";
-        var attributes = {};
-        attributes.id = "slider";
-        swfobject.embedSWF("flash_slider.swf", "flash_grid_slider", "960", "350", "9.0.0", false, flashvars, params, attributes);
-    </script>
+      <script type="text/javascript" src="{% static "js/swfobject.js" %}"></script>
+      <script type="text/javascript">
+          var flashvars = {};
+          flashvars.xml_file = "photo_list.xml";
+          var params = {};
+          params.wmode = "transparent";
+          var attributes = {};
+          attributes.id = "slider";
+          swfobject.embedSWF("flash_slider.swf", "flash_grid_slider", "960", "350", "9.0.0", false, flashvars, params, attributes);
+      </script>
 
-    <link rel="stylesheet" type="text/css" href="{% static "ddsmoothmenu.css" %}" />
+      <link rel="stylesheet" type="text/css" href="{% static "ddsmoothmenu.css" %}" />
 
-    <script type="text/javascript" src="{% static "js/jquery.min.js" %}"></script>
-    <script type="text/javascript" src="{% static "js/ddsmoothmenu.js" %}">
+      <script type="text/javascript" src="{% static "js/jquery.min.js" %}"></script>
+      <script type="text/javascript" src="{% static "js/ddsmoothmenu.js" %}">
 
-    /***********************************************
-    * Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
-    * This notice MUST stay intact for legal use
-    * Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
-    ***********************************************/
+      /***********************************************
+      * Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+      * This notice MUST stay intact for legal use
+      * Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+      ***********************************************/
 
-    </script>
+      </script>
 
-    <script type="text/javascript">
+      <script type="text/javascript">
 
-    ddsmoothmenu.init({
-        mainmenuid: "templatemo_menu", //menu DIV id
-        orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
-        classname: 'ddsmoothmenu', //class added to menu's outer DIV
-        //customtheme: ["#1c5a80", "#18374a"],
-        contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
-    })
+      ddsmoothmenu.init({
+          mainmenuid: "templatemo_menu", //menu DIV id
+          orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+          classname: 'ddsmoothmenu', //class added to menu's outer DIV
+          //customtheme: ["#1c5a80", "#18374a"],
+          contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+      })
 
-    </script>
+      </script>
 
     </head>
 
@@ -93,14 +93,6 @@
                 <br style="clear: left" />
             </div> <!-- end of templatemo_menu -->
         </div> <!-- end of header -->
-        
-        <div id="templatemo_slider">
-            <div id="flash_grid_slider">
-                <a rel="nofollow" href="http://www.adobe.com/go/getflashplayer">
-                    <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
-                </a>
-            </div>
-        </div>
         
 
         {% block home_template %} {% endblock %}
@@ -170,4 +162,4 @@
     </div>
 
     </body>
-    </html>
+  </html>

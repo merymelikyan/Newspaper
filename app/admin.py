@@ -19,7 +19,19 @@ from .models import (
     AboutText2,
     CategoriesMain,
     Categories,
-    Testimonial
+    Testimonial,
+    BlogMain,
+    Blog1,
+    Blogs,
+    Paging,
+    PortfolioMain,
+    WebImage,
+    Photography,
+    PrintMedia,
+    BlogPostMain,
+    BlogPost,
+    CommentsMain,
+    Comments
     )
 
 admin.site.register(HeaderText)
@@ -40,3 +52,15 @@ admin.site.register(AboutText2)
 admin.site.register(CategoriesMain)
 admin.site.register(Categories)
 admin.site.register(Testimonial)
+admin.site.register(BlogMain)
+admin.site.register(Blog1)
+admin.site.register(Blogs)
+admin.site.register(Paging)
+admin.site.register(PortfolioMain)
+admin.site.register(WebImage)
+admin.site.register(Photography)
+admin.site.register(PrintMedia)
+admin.site.register(BlogPostMain)
+admin.site.register(BlogPost)
+admin.site.register(CommentsMain)
+admin.site.register(Comments)
